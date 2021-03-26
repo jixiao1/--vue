@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    app组件
+   <div class="routerlink">
+      <router-link to="/one" tag="div">one</router-link>
+    <router-link to="/two" tag="div">two</router-link>
+   </div>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  name: 'App'
 }
 </script>
 
@@ -24,5 +24,19 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.routerlink {
+  display: flex;
+  position: relative;
+  left: 45%;
+}
+.routerlink >div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin:20px 10px;
+  line-height: 100px;
+  text-align: center;
+  cursor: pointer;
 }
 </style>
